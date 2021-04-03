@@ -27,7 +27,7 @@ The response is a JSON object of the form:
 
 ```javascript
 {
-  msgType: 'Read-Ack',
+  msgType: { code: 4, text: 'Read-Ack' },
   dataId: { id: 0, name: 'Status' },
   properties: {
     fault: false,
@@ -44,16 +44,16 @@ The response is a JSON object of the form:
 
 where:
 
-* *msgType* is one of:
+* *msgType* is an object containing the numeric and textual representation of the type of message and can be one of:
 
-  * Read-Data
-  * Write-Data
-  * Invalid-Data
-  * Reserved
-  * Read-Ack
-  * Write-Ack
-  * Data-Invalid
-  * Unknown-DataId
+  * Read-Data (0)
+  * Write-Data (1)
+  * Invalid-Data (2)
+  * Reserved (3)
+  * Read-Ack (4)
+  * Write-Ack (5)
+  * Data-Invalid (6)
+  * Unknown-DataId (7)
 
 * *dataId* is the Opentherm data object containing the id and name
 * *properties* is an object containing all properties of the data object and their values
