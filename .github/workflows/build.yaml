@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
     - master
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +22,11 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run test
+        env:
+          TZ: 'Europe/Amsterdam'
       - run: npm run coverage
+        env:
+          TZ: 'Europe/Amsterdam'
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
@@ -42,3 +46,4 @@ jobs:
       - run: npm publish  
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
