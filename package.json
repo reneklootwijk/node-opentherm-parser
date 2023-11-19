@@ -1,6 +1,6 @@
 {
   "name": "node-opentherm-parser",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Parser for Opentherm messages",
   "main": "./lib/index.js",
   "directories": {
