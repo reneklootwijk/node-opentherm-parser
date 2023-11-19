@@ -39,8 +39,8 @@ describe('Check all different data types', function () {
   it('Parse a signed 8-bit integer data type (S8)', function () {
     const result = parser('10312230')
     assert.strictEqual(result.msgType.text, 'Write-Data', 'wrong message type reported')
-    assert.strictEqual(result.properties.ch_setpoint_high, 48, 'wrong property value reported')
-    assert.strictEqual(result.properties.ch_setpoint_low, 34, 'wrong property value reported')
+    assert.strictEqual(result.properties.ch_setpoint_high, 34, 'wrong property value reported')
+    assert.strictEqual(result.properties.ch_setpoint_low, 48, 'wrong property value reported')
   })
 
   it('Parse a daytime data type (DAYTIME)', function () {
