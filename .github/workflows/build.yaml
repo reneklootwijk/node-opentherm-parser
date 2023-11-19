@@ -1,4 +1,4 @@
-name: build
+name: Opentherm parser
 
 on:
   push:
